@@ -17,38 +17,66 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#E1E9E4] bg-white/95 backdrop-blur-md shadow-xs">
-      {/* Top Bar: Credentials & Hotline */}
-      <div className="bg-[#0A3D36] text-[#E8F5F1] text-xs py-2 px-4 border-b border-[#12534A]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="flex items-center gap-1.5 font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+      {/* Top Bar: Credentials & Regulatory Trust Badges */}
+      <div className="bg-[#0A3D36] text-[#E8F5F1] text-xs py-1.5 px-4 border-b border-[#12534A]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+          {/* Right Side (RTL): Trust badges in clean order */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap text-[11px] sm:text-xs">
+            {/* 1. داروخانه شبانه‌روزی با نظارت مستقیم دکتر داروساز */}
+            <span className="flex items-center gap-1.5 font-medium text-[#C8E8DF] whitespace-nowrap">
+              <span className="material-symbols-outlined text-[15px] text-[#5CE6BA]">verified_user</span>
               داروخانه شبانه‌روزی با نظارت مستقیم دکتر داروساز
             </span>
-            <span className="hidden md:inline text-[#76A89F]">|</span>
-            <span className="hidden md:flex items-center gap-1 text-[#C4E3DB]">
-              <span className="material-symbols-outlined text-[15px]">ac_unit</span>
+
+            <span className="hidden sm:inline text-[#5A8E83]">|</span>
+
+            {/* 2. تضمین ارسال زنجیره سرد (Cold-Chain) داروهای یخچالی */}
+            <span className="hidden sm:flex items-center gap-1 text-[#C4E3DB] whitespace-nowrap">
+              <span className="material-symbols-outlined text-[14px] text-[#72F4CE]">ac_unit</span>
               تضمین ارسال زنجیره سرد (Cold-Chain) داروهای یخچالی
             </span>
-            <span className="hidden lg:inline text-[#76A89F]">|</span>
-            <span className="hidden lg:flex items-center gap-1 text-[#C4E3DB]">
-              <span className="material-symbols-outlined text-[15px]">verified</span>
+
+            <span className="hidden lg:inline text-[#5A8E83]">|</span>
+
+            {/* 3. استعلام اصالت شناسه رهگیری TTAC سازمان غذا و دارو */}
+            <span className="hidden lg:flex items-center gap-1 text-[#C4E3DB] whitespace-nowrap">
+              <span className="material-symbols-outlined text-[15px] text-[#72F4CE]">verified</span>
               استعلام اصالت شناسه رهگیری TTAC سازمان غذا و دارو
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-[11px] bg-[#0E544A] px-2 py-0.5 rounded text-[#D1ECE5]">
-              طراحی و توسعه: <strong className="text-white font-bold">گروه نرم‌افزاری هیمورا</strong>
-            </span>
-            <a
-              href="tel:02191008844"
-              className="flex items-center gap-1 font-medium hover:text-[#5CE6BA] transition-colors"
-              dir="ltr"
+          {/* Left Side (RTL): Standalone Himora Software Group Distinctive Badge */}
+          <div className="flex items-center shrink-0">
+            <div
+              id="himora-dev-badge"
+              className="group relative flex items-center gap-2 bg-gradient-to-r from-[#0d4f43] via-[#09473b] to-[#06332a] hover:from-[#116354] hover:to-[#09473b] px-3 py-1 rounded-full border border-[#72F4CE]/35 shadow-xs hover:border-[#72F4CE]/70 transition-all cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[15px]">call</span>
-              ۰۲۱ - ۹۱۰۰ ۸۸۴۴
-            </a>
+              {/* Green pulsing radar indicator belonging to Himora */}
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-80"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10B981] shadow-xs shadow-[#10B981]/80"></span>
+              </span>
+
+              <span className="text-[11px] text-[#D8EFE8] flex items-center gap-1 whitespace-nowrap">
+                <span>طراحی و توسعه:</span>
+                <span className="font-extrabold text-white tracking-wide bg-gradient-to-l from-white to-[#A8F8DE] bg-clip-text text-transparent group-hover:from-white group-hover:to-[#72F4CE]">
+                  گروه نرم‌افزاری هیمورا
+                </span>
+              </span>
+
+              <span className="text-[#3D7A6E]">|</span>
+
+              <a
+                href="tel:09354467269"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1 text-[11px] font-bold text-[#72F4CE] hover:text-white transition-colors whitespace-nowrap"
+                dir="ltr"
+                title="تماس مستقیم با توسعه‌دهنده (هیمورا)"
+              >
+                <span className="material-symbols-outlined text-[13px]">phone_iphone</span>
+                <span className="font-mono font-semibold">۰۹۳۵ ۴۴۶ ۷۲۶۹</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -133,11 +133,27 @@ export default function Footer() {
 
         {/* Copyright & Hemora Software Group Mention */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F9C8B] pt-4">
-          <p>© تمامی حقوق برای داروخانه آنلاین درمانیک محفوظ است.</p>
-          <div className="flex items-center gap-1.5 text-white font-medium">
-            <span>توسعه‌یافته با بالاترین استانداردهای سلامت توسط</span>
-            <strong className="text-[#72F4CE]">گروه نرم‌افزاری هیمورا (Hemora)</strong>
+          <div className="flex items-center flex-wrap gap-2 text-white font-medium">
+            <span>طراحی، توسعه و پشتیبانی فنی:</span>
+            <div className="inline-flex items-center gap-2 bg-[#0A3D36] border border-[#72F4CE]/30 px-3 py-1 rounded-full shadow-inner">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]"></span>
+              </span>
+              <strong className="text-[#72F4CE] tracking-wide">گروه نرم‌افزاری هیمورا (Hemora)</strong>
+              <span className="text-white/20">|</span>
+              <a
+                href="tel:09354467269"
+                className="text-[#9FEFDC] hover:text-white font-mono font-bold transition-colors flex items-center gap-1"
+                dir="ltr"
+                title="تماس مستقیم با توسعه‌دهنده"
+              >
+                <span className="material-symbols-outlined text-[13px]">call</span>
+                ۰۹۳۵ ۴۴۶ ۷۲۶۹
+              </a>
+            </div>
           </div>
+          <p>© تمامی حقوق برای داروخانه آنلاین درمانیک محفوظ است.</p>
         </div>
       </div>
     </footer>
