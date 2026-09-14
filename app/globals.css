@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --font-vazir: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-vazir);
+}
+
+.font-num {
+  font-family: var(--font-jakarta), var(--font-vazir);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+

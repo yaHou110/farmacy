@@ -1,0 +1,6 @@
+{
+  "name": "درمانیک | داروخانه تخصصی آنلاین هیمورا",
+  "description": "پلتفرم جامع تجارت الکترونیک سلامت و داروخانه شبانه‌روزی هیمورا با نظارت مستقیم دکتر داروساز، استعلام نسخه، پیگیری زنجیره سرد و تضمین اصالت کالا",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
